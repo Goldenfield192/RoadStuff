@@ -1,0 +1,15 @@
+{
+    "mod": {
+        "pkg": "com.goldenfield192.road",
+        "cls": "Mod",
+        "name": "Mod",
+        "id": "gfsroad",
+        "version": "0.0.1",
+        "dependencies": {
+        }
+    },
+    "umc": {
+        "version": "latest"
+    }
+}
+

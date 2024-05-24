@@ -1,0 +1,5 @@
+# Blender 3.6.4 MTL File: 'block.blend'
+# www.blender.org
+
+newmtl Material
+map_Kd road_asphalt.png
