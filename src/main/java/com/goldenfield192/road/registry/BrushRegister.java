@@ -11,11 +11,15 @@ import java.awt.image.BufferedImage;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 
 public class BrushRegister {
     private static final Identifier registryTable = new Identifier(Main.MODID, "brush/brush.json");
     private static final HashMap<String, Brush> brushMap = new HashMap<>();
+
+    public static final BrushRegister INSTANCE = new BrushRegister();
 
     public void register(){
         ArrayList<InputStream> list = new ArrayList<>();
@@ -65,6 +69,7 @@ public class BrushRegister {
         protected int xOffset;
         protected int yOffset;
         protected final HashMap<Integer, String> color = new HashMap<>();
+
 
         private Brush(BufferedImage image, int width, int height) {
             this.image = image;

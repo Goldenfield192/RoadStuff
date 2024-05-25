@@ -53,10 +53,8 @@ public class Main extends ModCore.Mod {
                 Packet.register(BrushChangePacket::new, PacketDirection.ClientToServer);
                 break;
             case INITIALIZE:
-                BrushRegister instance = new BrushRegister();
-                instance.register();
+                BrushRegister.INSTANCE.register();
                 break;
-            case FINALIZE:
         }
     }
 
@@ -70,7 +68,7 @@ public class Main extends ModCore.Mod {
                 ItemRender.register(RegisterItems.BIKE_ITEM, new Identifier(Main.MODID,"items/tex1"));
                 ItemRender.register(RegisterItems.BRUSH_ITEM, new Identifier(Main.MODID, "items/brush"));
 
-                EntityRenderer.register(BikeEntity.class, new  VehicleRenderer());
+                EntityRenderer.register(BikeEntity.class, new VehicleRenderer());
                 break;
             case SETUP:
                 GlobalRender.registerItemMouseover(RegisterItems.BRUSH_ITEM, BrushGlobalRenderer::renderMouseover);
